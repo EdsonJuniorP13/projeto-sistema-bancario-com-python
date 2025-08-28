@@ -1,4 +1,4 @@
-from abc import ABC, abstractclassmethod, abstractproperty
+from abc import ABC, abstractmethod
 from datetime import datetime
 
 
@@ -174,4 +174,5 @@ class Deposito(Transacao):
         if sucesso_transacao:
 
             conta.historico.adicionar_transacao(self)
+
 
