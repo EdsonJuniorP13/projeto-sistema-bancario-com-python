@@ -135,11 +135,12 @@ class Historico:
 
 class Transacao(ABC):
     @property
-    @abstractproperty
+    @abstractmethod
     def valor(self):
         pass
 
-    @abstractclassmethod
+    @classmethod
+    @abstractmethod
     def registrar(self, conta):
         pass
 
@@ -173,3 +174,4 @@ class Deposito(Transacao):
         if sucesso_transacao:
 
             conta.historico.adicionar_transacao(self)
+
